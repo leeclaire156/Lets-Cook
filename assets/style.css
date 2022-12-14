@@ -1,0 +1,11 @@
+.text {
+    text-align: center;
+}
+
+.text:hover {
+    border: 3px solid green;
+}
+
+.headerbtn {
+    border: 3px solid green;
+}
