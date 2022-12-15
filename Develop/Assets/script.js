@@ -52,3 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+var button = document.querySelector(".renderbtn")
+
+
+  function renderCard() {
+    var createDiv = document.createElement("div");
+    var cardpage = document.querySelector(".columns");
+    cardpage.append(createDiv)
+
+    
+
+  }
