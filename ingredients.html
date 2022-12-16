@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <title>Document</title>
 </head>
+
 <body>
   <!-- navbar -->
   <nav class="navbar is-transparent">
@@ -15,7 +18,6 @@
         <img src="" alt="Let's Cook" width="112" height="28">
       </a>
     </div>
-  
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="./index.html">
@@ -46,7 +48,6 @@
       </div>
     </div>
   </nav>
-  
   <!-- container for all the cards -->
   <div class="columns">
 
@@ -97,44 +98,43 @@
       </div>
     </div>
 
-   -->
 
-  <button class="js-modal-trigger" data-target="modal-js-example">
-    Open JS example modal
-  </button>
 
-  <div id="modal-js-example" class="modal">
-    <div class="modal-background"></div>
-  
-    <div class="modal-content">
-      <div class="box">
-        <p>Modal JS example</p>
-        <!-- Your content -->
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box">
+          <p>Modal JS example</p>
+          <!-- Your content -->
+        </div>
+      </div>
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div class="modal" id="modalinfo">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni, consequatur, provident, sint possimus
+          debitis sunt libero aperiam dolore autem rerum quae a dignissimos accusamus non cumque quidem. Voluptates,
+          officia!
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
       </div>
     </div>
-  
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-
-  <div class="modal" id="modalinfo">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Modal title</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni, consequatur, provident, sint possimus debitis sunt libero aperiam dolore autem rerum quae a dignissimos accusamus non cumque quidem. Voluptates, officia!
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
-      </footer>
-    </div>
-  </div>
 
 
-  <!-- <button class="js-modal-trigger showModal" data-target="modal-js-example">
+    <!-- <button class="js-modal-trigger showModal" data-target="modal-js-example">
+
     Open JS example modal
   </button>
 
@@ -155,6 +155,9 @@
           </footer>
         </div>
       </div> -->
-      <script src="./Develop/Assets/script.js"></script>
+
+    <script src="./Develop/Assets/displayed-results.js"></script>
 </body>
+
+
 </html>
