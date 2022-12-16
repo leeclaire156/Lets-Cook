@@ -11,10 +11,11 @@
     <!--Favicon linkage-->
     <link rel="icon" href="./Develop/Images/Fridge_Favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
+    <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_DXYq1XuRt595dYtnSaiXZs"></script>
+</head>
+
 
 <body>
-
     <nav class="navbar is-transparent">
         <div class="navbar-brand">
           <a class="navbar-item" href="./index.html">
@@ -26,50 +27,49 @@
             <span></span>
           </div>
         </div>
-      
+        
         <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="./index.html">
-              Home
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="">
-                Other
-              </a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="">
-                  Cheap
+            <div class="navbar-start">
+                <a class="navbar-item" href="./index.html">
+                    Home
                 </a>
-                <a class="navbar-item" href="">
-                  Quick
-                </a>
-                <a class="navbar-item" href="">
-                  Vegetarian
-                </a>
-                <a class="navbar-item" href="">
-                  Vegan
-                </a>
-                <a class="navbar-item" href="">
-                  Culture
-                </a>
-                <style>
-                  .navbar-item {
-                    color: black;
-                  }
-                  .navbar-link {
-                    color: black;
-                  }
-                </style>
-              </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="">
+                        Other
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="">
+                            Cheap
+                        </a>
+                        <a class="navbar-item" href="">
+                            Quick
+                        </a>
+                        <a class="navbar-item" href="">
+                            Vegetarian
+                        </a>
+                        <a class="navbar-item" href="">
+                            Vegan
+                        </a>
+                        <a class="navbar-item" href="">
+                            Culture
+                        </a>
+                          <style>
+                            .navbar-item {
+                                color: black;
+                            }
+
+                            .navbar-link {
+                                color: black;
+                            }
+                        </style>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="navbar-end">
+            <div class="navbar-end">
             </div>
-            </div>
-            </div>
-          </div>
         </div>
-      </nav> 
+        </nav> 
+			
     <div class="searchBox">
       <div class="image">
         <img class="img" src="./Develop/Images/Placeholder-Main-Pg-Banner.jpg" alt="veggieBoard"/>
@@ -104,11 +104,11 @@
         </div>
 
         <div class="flyRight">
-          <input id="searchInput">
+            <grammarly-editor-plugin><input id="searchInput"></grammarly-editor-plugin>
           <button type="submit" id="submitBtn">Submit</button>
         </div>
       </div>
-
+			</div>
 
     <script src="./Develop/Assets/script.js"></script>
 </body>
