@@ -1,6 +1,5 @@
 *
  {
-    background-color:rgb(127, 160, 217);
     border-style: double;
     text-decoration-color: black;
     text-align: center;
@@ -10,3 +9,37 @@
     color: black;
 }
 
+.searchBox {
+    position: relative;
+    text-align: center;
+    color: rgb(74, 30, 110);
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.flyRight {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    transform: translate(50%, -50%);
+    border: none;
+}
+  
+.flyDown {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: none;
+}
+  
+.flyUp {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: none;
+}  
+
+.submitButton {
+    border: none;
+}
