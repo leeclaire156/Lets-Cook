@@ -10,68 +10,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Develop/Assets/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!--Favicon linkage-->
     <link rel="icon" href="./Develop/Images/Fridge_Favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
+  
+</head>
 
 <body>
 
-    <nav class="navbar is-transparent">
-        <div class="navbar-brand">
+    <nav class="navbar">
+      <div class="navbar-brand" style="border: none;">
           <a class="navbar-item" href="./index.html">
             <img src="./Develop/Images/baking.png" alt="Let's Cook" width="70" height="20" style="color: black;">
           </a>
-          <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample" >
             <span></span>
             <span></span>
             <span></span>
-          </div>
         </div>
+      </div>
       
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="./index.html">
-              Home
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
+      <div class="navbar-start">
+          <a class="navbar-item-home" href="./index.html">
+            Home
+          </a>
+      </div>
+        <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link" href="">
                 Other
               </a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="">
-                  Cheap
-                </a>
-                <a class="navbar-item" href="">
+          <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item-list" href="">
                   Quick
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item-list" href="">
+                  Inexpensive
+                </a>
+                <a class="navbar-item-list" href="">
                   Vegetarian
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item-list" href="">
                   Vegan
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item-list" href="">
                   Culture
                 </a>
-                <style>
-                  .navbar-item {
-                    color: black;
-                  }
-                  .navbar-link {
-                    color: black;
-                  }
-                </style>
-              </div>
-            </div>
           </div>
-          <div class="navbar-end">
-            </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </nav> 
+        </div> 
+    </nav> 
 
 
     <div class="searchBox">
@@ -83,6 +70,13 @@
          opacity: 0.7;
          }
       </style>
+
+
+
+
+
+
+
 
       <div>
         <div class="flyDown">
@@ -106,6 +100,7 @@
               color: rgb(74, 30, 110);
               font-family: 'Pacifico', cursive;
               border: none;
+
             }
           </style>
       </div>
@@ -114,7 +109,7 @@
           <input id="searchInput" size="80px">
           <div class="submitButton">
             <br>
-            <button type="submit" id="submitBtn" style="font-size: 24px;">Submit</button>
+            <button type="submit" id="submitBtn" style="font-size: 24px; font-style: italic;">Submit</button>
           </div>
       </div>
 

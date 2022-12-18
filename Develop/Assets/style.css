@@ -9,6 +9,62 @@
     color: black;
 }
 
+.navbar {
+    border: none;
+    position: relative;
+    float: center;
+    padding-left: 100px;
+}
+
+.navbar-item {
+    border: none;
+    color: black;
+}
+
+.navbar-start {
+    align-content: center;
+    color: black;
+    padding-left: 300px;
+    border: none;
+}
+
+.navbar-item-home {
+    font-size: 24px;
+    border: none;
+    margin: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-link {
+    border: none;
+    color: black;
+    font-size: 24px;
+    margin: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 300px;
+  }
+
+  .navbar-item-list {
+    border: none;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 .searchBox {
     position: relative;
     text-align: center;
@@ -23,6 +79,7 @@
     left: 15%;
     transform: translate(50%, -50%);
     border: none;
+
 }
   
 .flyDown {
@@ -30,6 +87,8 @@
     top: 5%;
     left: 5%;
     border: none;
+    display: flex;
+    flex-wrap: wrap;
 }
   
 .flyUp {
@@ -38,8 +97,19 @@
     left: 40%;
     transform: translate(-50%, -50%);
     border: none;
+    display: flex;
+    flex-wrap: wrap;
 }  
 
 .submitButton {
     border: none;
 }
+
+
+
+
+
+
+
+
+
