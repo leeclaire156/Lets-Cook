@@ -60,7 +60,5 @@ var button = document.querySelector(".renderbtn")
     var createDiv = document.createElement("div");
     var cardpage = document.querySelector(".columns");
     cardpage.append(createDiv)
-
-    
-
   }
+

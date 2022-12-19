@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Develop/Assets/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!--Favicon linkage-->
     <link rel="icon" href="./Develop/Images/Fridge_Favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -19,10 +18,10 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" style="background-color: rgb(227, 244, 212);">
       <div class="navbar-brand" style="border: none;">
           <a class="navbar-item" href="./index.html">
-            <img src="./Develop/Images/baking.png" alt="Let's Cook" width="70" height="20" style="color: black;">
+            <img src="./Develop/Images/baking.png" alt="Let's Cook" width="60" height="20" style="color: black;">
           </a>
         <div class="navbar-burger" data-target="navbarExampleTransparentExample" >
             <span></span>
@@ -71,37 +70,33 @@
          }
       </style>
 
-
-
-
-
-
-
-
-      <div>
         <div class="flyDown">
-          <p class="textDown">What's in your fridge?</p>
+          <p class="textDown" >What's in your fridge?</p>
           <style>
             .textDown {
-              font-size: 80px;
-              color: rgb(74, 30, 110);
-              font-family: 'Pacifico', cursive;
               border: none;
+              font-family: 'Pacifico', cursive;
+              font-size: 80px;
+              animation-name: textchange;
+              animation-duration: 15s;
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
             }
           </style>
         </div>
-      </div>  
 
       <div class="flyUp">
-          <p class="textUp">Let's Cook it !</p>
+          <p class="textUp">Let's Cook it!</p>
           <style>
             .textUp {
-              font-size: 80px;
-              color: rgb(74, 30, 110);
-              font-family: 'Pacifico', cursive;
               border: none;
-
-            }
+              font-family: 'Pacifico', cursive;
+              font-size: 80px;
+              animation-name: textchange;
+              animation-duration: 15s;
+              animation-direction: alternate-reverse;
+              animation-iteration-count: infinite;
+              }
           </style>
       </div>
 

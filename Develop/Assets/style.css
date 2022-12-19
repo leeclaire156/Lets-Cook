@@ -9,6 +9,8 @@
     color: black;
 }
 
+
+
 .navbar {
     border: none;
     position: relative;
@@ -89,7 +91,22 @@
     border: none;
     display: flex;
     flex-wrap: wrap;
+
 }
+
+
+  @keyframes textchange {
+    0%   {color:rgb(137, 13, 13);}
+    20% {color:rgb(212, 43, 60); }
+    30% {color:rgb(190, 188, 117); }
+    40%  {color:rgb(100, 96, 20); }
+    50%  {color:rgb(39, 146, 94);}
+    60%  {color:rgb(33, 95, 195); }
+    70%  {color:rgb(59, 43, 177); }
+    80% {color:rgb(127, 36, 201); }
+    90%  {color:rgb(146, 29, 136); }
+    100%  {color:rgb(176, 32, 97); }
+  }
   
 .flyUp {
     position: absolute;
@@ -104,6 +121,7 @@
 .submitButton {
     border: none;
 }
+
 
 
 
