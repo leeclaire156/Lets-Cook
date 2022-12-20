@@ -15,7 +15,7 @@ This project was created by [André Brahin](https://github.com/VenBak), [Erica D
 * André was responsible for the wireframing, HTML, and Bulma's CSS framework
 * Erica was responsible for the CSS
 * Muhammad was responsible for 
-* Claire was responsible for integrating the Grammarly API and the recipe information into the result page modals using the Spoonacular API
+* Claire was responsible for integrating the Grammarly API, utilizing local storage for searches, and the recipe information into the result page modals using the Spoonacular API
 
 * Pots and vegetables harvest picture provided by:
 https://www.freepik.com/free-photo/pots-vegetables-harvest_1440232.htm#query=food&position=17&from_view=search&track=sph
