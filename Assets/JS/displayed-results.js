@@ -57,9 +57,7 @@ function renderCard() {
 //Upon loading, the user's search query is extracted (lines 59-61) from the URL, I console logged to double check
 //The extracted query is put into the resultsURL variable, which is then fetched and the resulting data is logged
 function resultsLogged() {
-    var userSearch = document.location.search;
-    var params = new URLSearchParams(userSearch);
-    var food = params.get("q");
+    var food = localStorage.getItem("search");
     console.log(food);
     var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food;
     var recipeArray = [];
