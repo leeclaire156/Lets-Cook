@@ -6,4 +6,3 @@ submitBtn.addEventListener("click", function () {
   var food = userInput.value;
   location.assign("./ingredients.html?q=" + food);
 })
-
