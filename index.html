@@ -13,12 +13,16 @@
     <!--Favicon linkage-->
     <link rel="icon" href="./Develop/Images/Fridge_Favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
+    <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_DXYq1XuRt595dYtnSaiXZs"></script>
+</head>
+
 
 <body>
 
     <nav class="navbar" style="background-color: rgb(227, 244, 212);">
       <div class="navbar-brand" style="border: none;">
+    <!-- <nav class="navbar is-transparent"> -->
+        <!-- <div class="navbar-brand"> -->
           <a class="navbar-item" href="./index.html">
             <img src="./Develop/Images/baking.png" alt="Let's Cook" width="60" height="20" style="color: black;">
           </a>
@@ -72,35 +76,19 @@
         <div class="flyDown">
           <p class="textDown" >What's in your fridge?</p>
           <style>
-            .textDown {
-              border: none;
-              font-family: 'Pacifico', cursive;
-              font-size: 80px;
-              animation-name: textchange;
-              animation-duration: 15s;
-              animation-direction: alternate;
-              animation-iteration-count: infinite;
-            }
+
           </style>
         </div>
 
       <div class="flyUp">
           <p class="textUp">Let's Cook it!</p>
           <style>
-            .textUp {
-              border: none;
-              font-family: 'Pacifico', cursive;
-              font-size: 80px;
-              animation-name: textchange;
-              animation-duration: 15s;
-              animation-direction: alternate-reverse;
-              animation-iteration-count: infinite;
-              }
+
           </style>
       </div>
 
       <div class="flyRight">
-          <input id="searchInput" size="80px">
+        <grammarly-editor-plugin><input id="searchInput" size="80px"></grammarly-editor-plugin>
           <div class="submitButton">
             <br>
             <button type="submit" id="submitBtn" style="font-size: 24px; font-style: italic;">Submit</button>

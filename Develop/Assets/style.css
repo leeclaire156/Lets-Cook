@@ -89,6 +89,25 @@
     flex-wrap: wrap;
 }
 
+.textUp {
+    border: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    animation-name: textchange;
+    animation-duration: 15s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+.textDown {
+    border: none;
+              font-family: 'Pacifico', cursive;
+              font-size: 80px;
+              animation-name: textchange;
+              animation-duration: 15s;
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
+            }
 
   @keyframes textchange {
     0%   {color:rgb(137, 13, 13);}

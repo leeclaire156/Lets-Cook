@@ -1,11 +1,13 @@
-fetch("https://api.spoonacular.com/recipes/findByIngredients?apiKey=094cfb718b2a486eb151cd32633e1d2d&ingredients=apples&number=30")
-.then(function (response) {
-    console.log(response);
-    return response.json();
-})
-.then(function (data){
-    console.log(data)
+//Submit button takes you to the results page and stores user input into the URL
+var submitBtn = document.querySelector("#submitBtn");
+var userInput = document.querySelector("#searchInput");
 
+submitBtn.addEventListener("click", function () {
+  var food = userInput.value;
+  location.assign("./ingredients.html?q=" + food);
+})
+
+<<<<<<< HEAD
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,3 +64,5 @@ var button = document.querySelector(".renderbtn")
     cardpage.append(createDiv)
   }
 
+=======
+>>>>>>> 6f1c45c3f404eef8c387dd170bfeb9dacdfbc897
