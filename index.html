@@ -2,98 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Cook</title>
-    <!--CSS linkage-->
-    <link rel="stylesheet" href="./Develop/Assets/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
-    <!--Favicon linkage-->
-    <link rel="icon" href="./Develop/Images/Fridge_Favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_DXYq1XuRt595dYtnSaiXZs"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Cook</title>
+  <!--CSS linkage-->
+  <link rel="stylesheet" href="./Assets/CSS/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+  <!--Favicon linkage-->
+  <link rel="icon" href="./Assets/Images/Fridge_Favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_DXYq1XuRt595dYtnSaiXZs"></script>
 </head>
 
 
 <body>
-    <nav class="navbar is-transparent">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="./index.html">
-            <img src="./Develop/Images/letsCookImg.png" alt="Let's Cook" width="120" height="30">
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./Assets/Images/letsCookImg.png" alt="Let's Cook" width="120" height="30">
+      </a>
+      <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html">
+          Home
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="">
+            Other
           </a>
-          <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="">
+              Cheap
+            </a>
+            <a class="navbar-item" href="">
+              Quick
+            </a>
+            <a class="navbar-item" href="">
+              Vegetarian
+            </a>
+            <a class="navbar-item" href="">
+              Vegan
+            </a>
+            <a class="navbar-item" href="">
+              Culture
+            </a>
+            <style>
+              .navbar-item {
+                color: black;
+              }
+
+              .navbar-link {
+                color: black;
+              }
+            </style>
           </div>
         </div>
-        
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="./index.html">
-                    Home
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="">
-                        Other
-                    </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="">
-                            Cheap
-                        </a>
-                        <a class="navbar-item" href="">
-                            Quick
-                        </a>
-                        <a class="navbar-item" href="">
-                            Vegetarian
-                        </a>
-                        <a class="navbar-item" href="">
-                            Vegan
-                        </a>
-                        <a class="navbar-item" href="">
-                            Culture
-                        </a>
-                          <style>
-                            .navbar-item {
-                                color: black;
-                            }
+      </div>
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
 
-                            .navbar-link {
-                                color: black;
-                            }
-                        </style>
-                    </div>
-                </div>
-            </div>
-            <div class="navbar-end">
-            </div>
-        </div>
-        </nav> 
-			
-    <div class="searchBox">
-      <div class="image">
-        <img class="img" src="./Develop/Images/Placeholder-Main-Pg-Banner.jpg" alt="veggieBoard"/>
+  <div class="searchBox">
+    <div class="image">
+      <img class="img" src="./Assets/Images/Placeholder-Main-Pg-Banner.jpg" alt="veggieBoard" />
+
+    </div>
+    <div>
+      <div class="flyDown">
+        <p class="textDown">What's in your fridge ?</p>
 
       </div>
-      <div>
-        <div class="flyDown">
-          <p class="textDown">What's in your fridge ?</p>
-
-        </div>
-        <div class="flyUp">
-          <p class="textUp">Let's Cook it !</p>
-        </div>
-
-        <div class="flyRight">
-            <grammarly-editor-plugin><input id="searchInput"></grammarly-editor-plugin>
-            <br>
-            <button type="submit" id="submitBtn">Submit</button>
-        </div>
+      <div class="flyUp">
+        <p class="textUp">Let's Cook it !</p>
       </div>
-			</div>
 
-    <script src="./Develop/Assets/script.js"></script>
+      <div class="flyRight">
+        <grammarly-editor-plugin><input id="searchInput"></grammarly-editor-plugin>
+        <br>
+        <button type="submit" id="submitBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./Assets/JS/script.js"></script>
 </body>
 
 </html>

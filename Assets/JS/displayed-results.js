@@ -1,4 +1,4 @@
-var apiKey = "";
+var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -72,11 +72,12 @@ function resultsLogged() {
             for (var i = 0; i < data.length; i++) {
                 recipeArray.push(data[i].id);
             }
+            console.log(recipeArray);
+            console.log(recipeArray[1]);
         })
-    console.log(recipeArray);
-    console.log(recipeArray[0]);
+
     // // Claire's code
-    // var getRecipeUrl = "https://api.spoonacular.com/recipes/" + recipeArray[0] + "/information?apiKey=d1ae693fc9a54390aeaf4500f67b3932"
+    // var getRecipeUrl = "https://api.spoonacular.com/recipes/" + recipeArray[0] + "/information?apiKey=" + apiKey;
     // fetch(getRecipeUrl)
     //     .then(function (response) {
     //         return response.json();
