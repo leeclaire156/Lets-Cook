@@ -35,3 +35,5 @@ https://www.geeksforgeeks.org/difference-between-window-location-href-window-loc
 
 * Font credits to :
 https://fonts.google.com/specimen/Rouge+Script
+
+* Credit to placing array items into a list goes to [gavgrif](https://stackoverflow.com/users/5867572/gavgrif): https://stackoverflow.com/questions/46141450/create-li-from-loop-through-array-and-display-to-html-as-a-list
