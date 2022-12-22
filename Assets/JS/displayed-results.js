@@ -1,4 +1,4 @@
-var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
+var apiKey = "33c3e845cfef4ac8a9f7162d4396ea0c";
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -106,35 +106,54 @@ function resultsLogged() {
                 footer.append(anchor);
                 anchor.setAttribute("class", "js-modal-trigger card-footer-item");
                 anchor.setAttribute("data-target", "modalinfo");
-                anchor.setAttribute("id", "moreinfo")
-                
+                anchor.setAttribute("id", "moreinfo");
+
                 title.innerHTML = data[index].title
                 // duration.innerHTML = "45 minutes"
-                ingredients.innerHTML = "Missing " + data[index].missedIngredients.length + " Ingredients" 
+                ingredients.innerHTML = "Missing " + data[index].missedIngredients.length + " Ingredients"
                 img.setAttribute("src", data[index].image)
                 anchor.innerHTML = "Open for more"
-            
+
                 // Opens modal when somebody presses open for more
-                anchor.addEventListener("click", function () {  
+                anchor.addEventListener("click", function () {
                     var modal = document.querySelector("#modalinfo")
                     modal.removeAttribute("class");
                     modal.setAttribute("class", "modal is-active")
+                    // console.log(data[index].id);
+                    var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
+                    fetch(getRecipeUrl)
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (data) {
+                            // console.log(data);
+
+                            //Sets title to modal
+                            var modaltitle = document.querySelector(".modal-card-title");
+                            modaltitle.textContent = data.title;
+
+                            //Takes ingredients out from object and pushes them into an array with just their amount and name
+                            var modalingredients = document.querySelector(".ingredients");
+                            var ingredientsArray = [];
+                            for (var i = 0; i < data.extendedIngredients.length; i++) {
+                                ingredientsArray.push(data.extendedIngredients[i].amount + " " + data.extendedIngredients[i].unit + " " + data.extendedIngredients[i].originalName);
+                            }
+                            //Takes each ingredient from array and puts them into a list
+                            var ingredientsList = "<ul>"
+                            ingredientsArray.forEach(function (ingredient) {
+                                ingredientsList += "<li>" + ingredient + "</li>";
+                            });
+                            ingredientsList += "</ul>"
+                            modalingredients.innerHTML = ingredientsList;
+
+                            //Sets recipe instructions
+                            var modalrecipe = document.querySelector(".recipe");
+                            modalrecipe.innerHTML = data.instructions;
+                        })
                 })
-                }
-            })}
-        
-
-    // // Claire's code
-    // var getRecipeUrl = "https://api.spoonacular.com/recipes/" + recipeArray[0] + "/information?apiKey=" + apiKey;
-    // fetch(getRecipeUrl)
-    //     .then(function (response) {
-    //         return response.json();
-    //     })
-    //     .then(function (data) {
-    //         console.log(data);
-
-    //     })
-
+            }
+        })
+}
 
 resultsLogged();
 
