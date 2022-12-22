@@ -7,19 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Let's Cook</title>
   <!--CSS linkage-->
-  <link rel="stylesheet" href="./Assets/CSS/style.css" />
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <!--Google Font linkage-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <!--Favicon linkage-->
   <link rel="icon" href="./Assets/Images/Fridge_Favicon.png">
+  <!--Bulma linkage-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Grammarly linkage -->
   <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_DXYq1XuRt595dYtnSaiXZs"></script>
 </head>
 
 
 <body>
-  <nav class="navbar is-transparent">
+  <!-- <nav class="navbar is-transparent">
     <div class="navbar-brand">
       <a class="navbar-item" href="./index.html">
         <img src="./Assets/Images/letsCookImg.png" alt="Let's Cook" width="120" height="30">
@@ -71,26 +74,26 @@
       <div class="navbar-end">
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <div class="searchBox">
     <div class="image">
-      <img class="img" src="./Assets/Images/Placeholder-Main-Pg-Banner.jpg" alt="veggieBoard" />
-
+      <img class="hero-img" src="./Assets/Images/TBD-placeholder.jpg" alt="veggieBoard" />
     </div>
-    <div>
+    <div class="main-area">
       <div class="flyDown">
-        <p class="textDown">What's in your fridge ?</p>
+        <p class="textDown line-1">Home cooked meals start with your fridge...</p>
 
       </div>
       <div class="flyUp">
-        <p class="textUp">Let's Cook it !</p>
+        <p class="textUp line-2">Add your ingredients below and let's cook!</p>
       </div>
 
       <div class="flyRight">
-        <grammarly-editor-plugin><input id="searchInput"></grammarly-editor-plugin>
+        <grammarly-editor-plugin><input id="searchInput" type="text"
+            placeholder="Ingredients"></grammarly-editor-plugin>
         <br>
-        <button type="submit" id="submitBtn">Submit</button>
+        <button type="submit" class="button is-primary is-large" id="submitBtn">Submit</button>
       </div>
     </div>
   </div>
