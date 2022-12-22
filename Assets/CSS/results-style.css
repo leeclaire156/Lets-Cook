@@ -1,0 +1,75 @@
+/* :root {
+    background-color: #272727;
+}
+
+* {
+    text-align: center;
+    color: white;
+}
+
+
+.searchBox {
+    position: relative;
+    text-align: center;
+}
+
+
+.flyRight {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    transform: translate(50%, -50%);
+    width: 100%;
+}
+
+
+.flyDown {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.textUp {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 90px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+
+.textDown {
+    font-family: 'Inter', sans-serif;
+    font-size: 90px;
+}
+
+#searchInput {
+    width: 400px;
+    border: none;
+    display: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+#submitBtn {
+    border: none;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* grammarly-editor-plugin {
+
+    --grammarly-button-position-bottom: 110px;
+    --grammarly-button-position-right: 0px;
+} */

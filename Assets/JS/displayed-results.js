@@ -126,7 +126,7 @@ function resultsLogged() {
                             return response.json();
                         })
                         .then(function (data) {
-                            // console.log(data);
+                            console.log(data);
 
                             //Sets title to modal
                             var modaltitle = document.querySelector(".modal-card-title");
@@ -148,7 +148,12 @@ function resultsLogged() {
 
                             //Sets recipe instructions
                             var modalrecipe = document.querySelector(".recipe");
-                            modalrecipe.innerHTML = data.instructions;
+                            if (data.instructions != null) {
+                                modalrecipe.innerHTML = data.instructions;
+                            } else {
+                                modalrecipe.innerHTML = "Sorry, no recipe here.";
+                            }
+
                         })
                 })
             }
