@@ -4,8 +4,10 @@ var userInput = document.querySelector("#searchInput");
 
 submitBtn.addEventListener("click", function () {
   var food = userInput.value;
-  location.assign("./ingredients.html?q=" + food);
+  localStorage.setItem("search", food);
+  location.assign("./ingredients.html");
 })
+
 
 // Renders Card when function is called in an area called content
 var column = document.createElement("div");

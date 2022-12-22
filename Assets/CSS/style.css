@@ -1,91 +1,27 @@
-*
- {
-    box-sizing: border-box;
-    border-style: double;
-    text-decoration-color: black;
+:root{
+    background-color: #272727;
+}
+
+* {
     text-align: center;
-    color: black;
+    color: white;
 }
-
-
-.navbar {
-    border: none;
-    position: relative;
-    float: center;
-    padding-left: 100px;
-}
-
-
-.navbar-item {
-    border: none;
-    color: black;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin: auto;
-    border: none;
-}
-
-
-.navbar-start {
-    align-content: center;
-    color: black;
-    padding-left: 300px;
-    border: none;
-}
-
-
-.navbar-item-home {
-    font-size: 24px;
-    color: black;
-    border: none;
-    margin: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-.navbar-link {
-    border: none;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    margin: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 300px;
-    margin-left: 400px;
-    margin-right: 300px;
-  }
-
-
-  .navbar-item-list {
-    border: none;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
 
 .searchBox {
     position: relative;
     text-align: center;
-    color: rgb(74, 30, 110);
-    display: flex;
 }
-  
+
 
 .flyRight {
     position: absolute;
-    bottom: 10%;
-    left: 15%;
+    bottom: 30%;
+    left: 30%;
     transform: translate(50%, -50%);
-    border: none;
-    width: 500px;
+    width: 100%;
 }
-  
+
 
 .flyDown {
     position: absolute;
@@ -97,75 +33,40 @@
 }
 
 img {
-    display: flex;
     justify-content: center;
-    opacity: 0.6;
-    }
+    opacity: 0.8;
+}
 
 .textUp {
     border: none;
-    font-family: 'Pacifico', cursive;
-    font-family: 'Sacramento', cursive;    
+    font-family: 'Inter', sans-serif;
     font-size: 90px;
-    animation-name: textchange;
-    animation-duration: 15s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
     position: absolute;
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
-    border: none;
-    display: flex;
-    flex-wrap: wrap;
-
 }
 
 
 .textDown {
-    border: none;
-    font-family: 'Pacifico', cursive;
-    font-family: 'Sacramento', cursive;    
+    font-family: 'Inter', sans-serif;
     font-size: 90px;
-    animation-name: textchange;
-    animation-duration: 15s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
 }
-
-
-  @keyframes textchange {
-    0%   {color:rgb(137, 13, 13);}
-    20% {color:rgb(212, 43, 60); }
-    50%  {color:rgb(39, 146, 94);}
-    60%  {color:rgb(33, 95, 195); }
-    70%  {color:rgb(59, 43, 177); }
-    80% {color:rgb(127, 36, 201); }
-    90%  {color:rgb(146, 29, 136); }
-    100%  {color:rgb(176, 32, 97); }
-  }
-  
 
 #searchInput {
     width: 400px;
     border: none;
-}  
+}
 
 
 #submitBtn {
     border: none;
-    width: 120px;
     font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* grammarly-editor-plugin {
 
-
-
-
-
-
-
-
-
-
+    --grammarly-button-position-bottom: 110px;
+    --grammarly-button-position-right: 0px;
+} */
