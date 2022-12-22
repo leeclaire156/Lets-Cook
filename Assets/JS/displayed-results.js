@@ -67,12 +67,62 @@ function resultsLogged() {
         })
         .then(function (data) {
             console.log(data);
-            for (var i = 0; i < data.length; i++) {
-                recipeArray.push(data[i].id);
-            }
-            console.log(recipeArray);
-            console.log(recipeArray[1]);
-        })
+            for (let index = 0; index < 10; index++) {
+                // Renders Card when function is called in an area called content
+                var column = document.createElement("div");
+                var cardpage = document.querySelector(".columns");
+                cardpage.append(column);
+                column.setAttribute("class", "column is-one-quarter");
+                var card = document.createElement("div");
+                column.append(card);
+                card.setAttribute("class", "card")
+                var cardcontent = document.createElement("div");
+                card.append(cardcontent);
+                cardcontent.setAttribute("class", "card-content");
+                var content = document.createElement("div");
+                cardcontent.append(content);
+                content.setAttribute("class", "content");
+                var title = document.createElement("p");
+                content.append(title);
+                title.setAttribute("class", "title is-4");
+                // var duration = document.createElement("p");
+                // content.append(duration);
+                // duration.setAttribute("id", "duration")
+                var ingredients = document.createElement("p");
+                content.append(ingredients);
+                ingredients.setAttribute("id", "ingredients");
+                var cardimage = document.createElement("div");
+                card.append(cardimage);
+                cardimage.setAttribute("class", "card-image");
+                var figure = document.createElement("figure");
+                cardimage.append(figure);
+                figure.setAttribute("class", "image is-4by3")
+                var img = document.createElement("img");
+                figure.append(img)
+                var footer = document.createElement("footer");
+                card.append(footer);
+                footer.setAttribute("class", "card-footer");
+                var anchor = document.createElement("a");
+                footer.append(anchor);
+                anchor.setAttribute("class", "js-modal-trigger card-footer-item");
+                anchor.setAttribute("data-target", "modalinfo");
+                anchor.setAttribute("id", "moreinfo")
+                
+                title.innerHTML = data[index].title
+                // duration.innerHTML = "45 minutes"
+                ingredients.innerHTML = "Missing " + data[index].missedIngredients.length + " Ingredients" 
+                img.setAttribute("src", data[index].image)
+                anchor.innerHTML = "Open for more"
+            
+                // Opens modal when somebody presses open for more
+                anchor.addEventListener("click", function () {  
+                    var modal = document.querySelector("#modalinfo")
+                    modal.removeAttribute("class");
+                    modal.setAttribute("class", "modal is-active")
+                })
+                }
+            })}
+        
 
     // // Claire's code
     // var getRecipeUrl = "https://api.spoonacular.com/recipes/" + recipeArray[0] + "/information?apiKey=" + apiKey;
@@ -84,7 +134,7 @@ function resultsLogged() {
     //         console.log(data);
 
     //     })
-}
+
 
 resultsLogged();
 
