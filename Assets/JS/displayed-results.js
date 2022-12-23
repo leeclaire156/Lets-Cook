@@ -85,9 +85,6 @@ function resultsLogged() {
                 var title = document.createElement("p");
                 content.append(title);
                 title.setAttribute("class", "title is-4");
-                // var duration = document.createElement("p");
-                // content.append(duration);
-                // duration.setAttribute("id", "duration")
                 var ingredients = document.createElement("p");
                 content.append(ingredients);
                 ingredients.setAttribute("id", "ingredients");
@@ -109,7 +106,6 @@ function resultsLogged() {
                 anchor.setAttribute("id", "moreinfo")
                 
                 title.innerHTML = data[index].title
-                // duration.innerHTML = "45 minutes"
                 ingredients.innerHTML = "Missing " + data[index].missedIngredients.length + " Ingredients" 
                 img.setAttribute("src", data[index].image)
                 anchor.innerHTML = "Open for more"
