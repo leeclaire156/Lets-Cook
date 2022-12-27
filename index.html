@@ -27,11 +27,11 @@
       <a class="navbar-item" href="./index.html">
         <img src="./Assets/Images/letsCookImg.png" alt="Let's Cook" width="auto" height="30">
       </a>
-      <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+      <!-- <div class="navbar-burger" data-target="navbarExampleTransparentExample">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </div> -->
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -79,26 +79,46 @@
   <div class="searchBox">
     <div class="image">
       <img class="hero-img" src="./Assets/Images/TBD-placeholder.jpg" alt="veggieBoard" />
-    </div>
-    <div class="main-area">
-      <div class="flyDown">
-        <p class="textDown line-1">Home cooked meals start with your fridge...</p>
+
+      <div class="mainArea">
+
+        <div class="textArea">
+          <p class="textDown line-1">Home cooked meals start with your fridge!</p>
+          <p class="textUp line-2">Add your ingredients below and let's cook</p>
+        </div>
+
+        <div class="searchArea">
+          <grammarly-editor-plugin>
+            <input id="searchInput" class="input" type="text" placeholder="Ingredients">
+          </grammarly-editor-plugin>
+
+          <div class="buttonsArea">
+            <grammarly-button class="grammarlyBtn"></grammarly-button>
+            <button type="submit" class="button is-primary" id="submitBtn">Submit</button>
+          </div>
+        </div>
+
+        <div class="parent pastSearches">
+        </div>
 
       </div>
-      <div class="flyUp">
-        <p class="textUp line-2">Add your ingredients below and let's cook!</p>
-      </div>
 
-      <div class="flyRight">
-        <grammarly-editor-plugin><input id="searchInput" type="text"
-            placeholder="Ingredients"></grammarly-editor-plugin>
-        <br>
-        <button type="submit" class="button is-primary is-large" id="submitBtn">Submit</button>
-      </div>
+
     </div>
-    <div class="parent">
-    </div>
+
+
+
   </div>
+
+
+
+
+
+
+
+
+
+
 
   <script src="./Assets/JS/script.js"></script>
 </body>
