@@ -27,11 +27,11 @@
       <a class="navbar-item" href="./index.html">
         <img src="./Assets/Images/letsCookImg.png" alt="Let's Cook" width="auto" height="30">
       </a>
-      <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+      <!-- <div class="navbar-burger" data-target="navbarExampleTransparentExample">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </div> -->
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -79,25 +79,49 @@
   <div class="searchBox">
     <div class="image">
       <img class="hero-img" src="./Assets/Images/TBD-placeholder.jpg" alt="veggieBoard" />
-    </div>
-    <div class="main-area">
-      <div class="flyDown">
-        <p class="textDown line-1">Home cooked meals start with your fridge...</p>
+
+      <div class="mainArea">
+
+        <div class="textArea">
+          <p class="textDown line-1">Home cooked meals start with your fridge!</p>
+          <p class="textUp line-2">Add your ingredients below and let's cook</p>
+        </div>
+
+        <div class="searchArea">
+          <grammarly-editor-plugin>
+            <input id="searchInput" class="input" type="text" placeholder="Ingredients">
+          </grammarly-editor-plugin>
+
+          <div class="buttonsArea">
+            <grammarly-button class="grammarlyBtn"></grammarly-button>
+            <button type="submit" class="button is-primary" id="submitBtn">Submit</button>
+          </div>
+        </div>
+
+        <div class="parent pastSearches">
+        </div>
 
       </div>
-      <div class="flyUp">
-        <p class="textUp line-2">Add your ingredients below and let's cook!</p>
-      </div>
-
-      <div class="flyRight">
-        <grammarly-editor-plugin><input id="searchInput" type="text"
-            placeholder="Ingredients"></grammarly-editor-plugin>
-        <br>
-        <button type="submit" class="button is-primary is-large" id="submitBtn">Submit</button>
-        <button class="button history1">Banana</button>
+      
+    </div>
+    
+    <div class="modal modal-no-input " id="modalinfo">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Whoa!</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body no-input-error">
+          Looks like you have an empty fridge, can't cook with nothing. Add something in!
+        </section>
+        <footer class="modal-card-foot">
+        </footer>
       </div>
     </div>
+
   </div>
+
 
   <script src="./Assets/JS/script.js"></script>
 </body>

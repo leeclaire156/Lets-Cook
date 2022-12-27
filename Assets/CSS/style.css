@@ -1,66 +1,86 @@
-body,
-html {
-    overflow-x: hidden;
-    overflow-y: auto;
-
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-:root {
-    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-    font-size: 62.5%;
-    border: 1px black solid;
-    background: url(../Images/root-background.jpg) repeat;
-    height: 100%;
-    width: 100%;
+.mainArea {
+    /* Positions the text, search bar, and history buttons over the background image*/
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Adjusts the height and width so they cover the background image that has an translucent box */
+    height: 75%;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* This aligns items (text, search bar, and history) on the cross axis (x-axis since it's flex column) */
+    align-items: center;
+
+    /* This aligns items (text, search bar, and history) on the main axis (y-axis since it's flex column) */
+    justify-content: space-around;
 }
 
 
-
-*>p {
-    color: rgb(0, 0, 0);
-    font-size: 5rem;
+.textArea {
     font-family: 'Playfair Display', serif;
-
+    color: black;
+    font-size: 45px;
+    /*Makes text easier to read*/
+    text-shadow: 0 0 3px white;
 }
 
-
-.line-1 {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.textArea>* {
+    margin: 30px;
 }
 
-.line-2 {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.searchArea {
+    display: flex;
+    /* This aligns items (input, grammarly button, and submit button) on the main axis */
+
 }
 
 #searchInput {
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    padding: 10px 20px;
-    margin: 9px 0;
-    border-radius: 10px;
+    width: 800px;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.225);
+
 }
 
-#submitBtn {
-    position: absolute;
-    top: 55%;
-    left: 78%;
-    transform: translate(-50%, -50%);
+.buttonsArea {
+    /* Places grammarly and submit button on the same line */
+    display: flex;
 }
+
+.buttonsArea>* {
+    /* Gives the buttons a bit of space between each other on their left and right*/
+    margin: 0 0.5rem;
+}
+
+
+.grammarlyBtn {
+    /* Moves the grammarly button down to align it with Bulma's input and submit button's height */
+    margin-top: .25rem;
+}
+
 
 grammarly-editor-plugin {
-    --grammarly-button-position-bottom: 424px;
-    --grammarly-button-position-right: 482px;
+    --grammarly-default-font-family: Optima, sans-serif;
+    --grammarly-interactive-color: #00d1b2;
+    --grammarly-card-border-radius: 5px;
+}
+
+.pastSearches {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 10px;
+
+}
+.image {
+    width: 100rem;
 }
