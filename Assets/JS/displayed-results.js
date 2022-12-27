@@ -1,7 +1,5 @@
 // Enter in your spoonacular API key
 var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
-
-// Bulma's JS code for the modal
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
