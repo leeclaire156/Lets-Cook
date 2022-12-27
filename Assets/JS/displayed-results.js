@@ -1,4 +1,5 @@
-var apiKey = "33c3e845cfef4ac8a9f7162d4396ea0c";
+// Enter in your spoonacular API key
+var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -44,23 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-var button = document.querySelector(".renderbtn")
-
-
-function renderCard() {
-    var createDiv = document.createElement("div");
-    var cardpage = document.querySelector(".columns");
-    cardpage.append(createDiv);
-}
-
-
 //Upon loading, the user's search query is extracted (lines 59-61) from the URL, I console logged to double check
 //The extracted query is put into the resultsURL variable, which is then fetched and the resulting data is logged
 function resultsLogged() {
+
+    var number = 12
     var index = localStorage.getItem("index");
     var food = localStorage.getItem("search"+index);
     console.log(food);
-    var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food;
+    var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food + "&number=" + number;
     var recipeArray = [];
     fetch(resultsUrl)
         .then(function (response) {
@@ -68,12 +61,14 @@ function resultsLogged() {
         })
         .then(function (data) {
             console.log(data);
-            for (let index = 0; index < 10; index++) {
-                // Renders Card when function is called in an area called content
+            // Iterates over all of the data 
+            for (let index = 0; index < 12; index++) {
+                // Renders Card when function is called in an area called columns
                 var column = document.createElement("div");
                 var cardpage = document.querySelector(".columns");
                 cardpage.append(column);
                 column.setAttribute("class", "column is-one-quarter");
+                // Creates the Card from Bulma with the CSS attributes
                 var card = document.createElement("div");
                 column.append(card);
                 card.setAttribute("class", "card")
@@ -83,15 +78,16 @@ function resultsLogged() {
                 var content = document.createElement("div");
                 cardcontent.append(content);
                 content.setAttribute("class", "content");
+                // Sets the title for the card and CSS attributes from Bulma
                 var title = document.createElement("p");
                 content.append(title);
-                title.setAttribute("class", "title is-4");
-                // var duration = document.createElement("p");
-                // content.append(duration);
-                // duration.setAttribute("id", "duration")
+                title.setAttribute("class", "title is-4 is-size-6");
+                // Sets the ingredients 
                 var ingredients = document.createElement("p");
                 content.append(ingredients);
                 ingredients.setAttribute("id", "ingredients");
+                ingredients.setAttribute("class", "is-size-7")
+                // Card Image
                 var cardimage = document.createElement("div");
                 card.append(cardimage);
                 cardimage.setAttribute("class", "card-image");
@@ -100,6 +96,7 @@ function resultsLogged() {
                 figure.setAttribute("class", "image is-4by3")
                 var img = document.createElement("img");
                 figure.append(img)
+                // Card Footer where the modal trigger will be
                 var footer = document.createElement("footer");
                 card.append(footer);
                 footer.setAttribute("class", "card-footer");
@@ -109,8 +106,9 @@ function resultsLogged() {
                 anchor.setAttribute("data-target", "modalinfo");
                 anchor.setAttribute("id", "moreinfo");
 
+
+                // Sets the data from the API as the text content for all of the html elements
                 title.innerHTML = data[index].title
-                // duration.innerHTML = "45 minutes"
                 ingredients.innerHTML = "Missing " + data[index].missedIngredients.length + " Ingredients"
                 img.setAttribute("src", data[index].image)
                 anchor.innerHTML = "Open for more"
