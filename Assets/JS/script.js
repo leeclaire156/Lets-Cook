@@ -48,3 +48,11 @@ for (let index = 1; index < localStorage.length; index++) {
 
 }
 
+  // var itemInput = document.getElementById ("searchInput") ;
+  // itemInput.addEventListener("keypress", 
+  // function(event) {
+  //   if (event.key === "Enter") {
+  //    event.preventDefault ();
+  //     document.getElementById("submitBtn").click();
+  //   }
+  // });

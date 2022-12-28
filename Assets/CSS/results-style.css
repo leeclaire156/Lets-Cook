@@ -73,3 +73,10 @@ img {
     --grammarly-button-position-bottom: 110px;
     --grammarly-button-position-right: 0px;
 } */
+
+.modal-card {
+    background-image: ;
+    opacity: 0.7;
+    color: black;
+
+}
