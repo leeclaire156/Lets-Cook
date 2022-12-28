@@ -75,7 +75,8 @@ img {
 } */
 
 .modal-card {
-    background-image: url(/Assets/JS/displayed-results.js);
+    background-image: ;
     opacity: 0.7;
     color: black;
+
 }
