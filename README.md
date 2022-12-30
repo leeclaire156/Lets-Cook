@@ -41,3 +41,9 @@ https://fonts.google.com/specimen/Rouge+Script
 * Image resizing credit goes to [developedbyed](https://www.youtube.com/@developedbyed): https://youtu.be/Xc6G3oV24yE?t=536 */
 
 * Text shadow credit goes to https://www.geeksforgeeks.org/css-font-border/
+
+* Flexbox guide provided by [CSS-Tricks](https://css-tricks.com/): https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+* Grammarly button and customization guide provided by [Grammarly for Developers](https://developer.grammarly.com/): https://developer.grammarly.com/docs/customization
+
+* Triggering submit button on enter tutorial provided by [W3schools](https://www.w3schools.com/default.asp): https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
