@@ -57,7 +57,6 @@ function resultsLogged() {
     fetch(resultsUrl)
         .then(function (response) {
             if (response.status === 402) {
-                console.log("Whop");
                 //If the user has used up all the requests quota, this function reveals the modal by adding the "is-active" tag to the existing class list
                 var noInputModal = document.querySelector(".modal-402-error");
                 noInputModal.classList.add("is-active");
