@@ -52,7 +52,6 @@ function resultsLogged() {
     var number = 12
     var index = localStorage.getItem("index");
     var food = localStorage.getItem("search"+index);
-    console.log(food);
     var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food + "&number=" + number;
     var recipeArray = [];
     fetch(resultsUrl)
@@ -60,8 +59,7 @@ function resultsLogged() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            // Iterates over all of the data 
+             // Iterates over all of the data 
             for (let index = 0; index < 12; index++) {
                 // Renders Card when function is called in an area called columns
                 var column = document.createElement("div");
@@ -118,16 +116,13 @@ function resultsLogged() {
                     var modal = document.querySelector("#modalinfo")
                     modal.removeAttribute("class");
                     modal.setAttribute("class", "modal is-active")
-                    // console.log(data[index].id);
-                    var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
+                   var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
                     fetch(getRecipeUrl)
                         .then(function (response) {
                             return response.json();
                         })
                         .then(function (data) {
-                            console.log(data);
-
-                            //Sets title to modal
+                             //Sets title to modal
                             var modaltitle = document.querySelector(".modal-card-title");
                             modaltitle.textContent = data.title;
 
