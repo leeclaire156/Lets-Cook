@@ -1,5 +1,5 @@
 // Enter in your spoonacular API key
-// var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
+var apiKey = "33c3e845cfef4ac8a9f7162d4396ea0c";
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -56,10 +56,24 @@ function resultsLogged() {
     var recipeArray = [];
     fetch(resultsUrl)
         .then(function (response) {
+            if (response.status === 402) {
+                console.log("Whop");
+                //If the user has used up all the requests quota, this function reveals the modal by adding the "is-active" tag to the existing class list
+                var noInputModal = document.querySelector(".modal-402-error");
+                noInputModal.classList.add("is-active");
+                var closeModal = document.querySelector(".delete");
+                closeModal.addEventListener("click", function (event) {
+                    location.assign("./index.html");
+                })
+                var homeButton = document.querySelector(".home-button");
+                homeButton.addEventListener("click", function () {
+                    location.assign("./index.html");
+                })
+            }
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            // console.log(data);
             // Iterates over all of the data 
             for (let index = 0; index < 12; index++) {
                 // Renders Card when function is called in an area called columns
@@ -120,6 +134,20 @@ function resultsLogged() {
                     var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
                     fetch(getRecipeUrl)
                         .then(function (response) {
+                            if (response.status === 402) {
+    console.log("Whop");
+    //If the user has used up all the requests quota, this function reveals the modal by adding the "is-active" tag to the existing class list
+    var noInputModal = document.querySelector(".modal-402-error");
+    noInputModal.classList.add("is-active");
+    var closeModal = document.querySelector(".delete");
+    closeModal.addEventListener("click", function (event) {
+        location.assign("./index.html");
+    })
+    var homeButton = document.querySelector(".home-button");
+    homeButton.addEventListener("click", function () {
+        location.assign("./index.html");
+    })
+}
                             return response.json();
                         })
                         .then(function (data) {
@@ -148,7 +176,7 @@ function resultsLogged() {
                                 //Takes steps out from object and pushes them into an array with just their number and directions
                                 var directionsArray = [];
                                 for (var i = 0; i < data.analyzedInstructions[0].steps.length; i++) {
-                                    directionsArray.push( data.analyzedInstructions[0].steps[i].step + " ");
+                                    directionsArray.push(data.analyzedInstructions[0].steps[i].step + " ");
                                 }
                                 //Takes each ingredient from array and puts them into a list
                                 var directionsList = "<ol>"
@@ -168,4 +196,3 @@ function resultsLogged() {
 }
 
 resultsLogged();
-
