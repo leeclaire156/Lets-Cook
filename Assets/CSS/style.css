@@ -40,8 +40,6 @@
 
 .searchArea {
     display: flex;
-    /* This aligns items (input, grammarly button, and submit button) on the main axis */
-
 }
 
 #searchInput {
