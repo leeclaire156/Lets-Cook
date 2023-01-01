@@ -44,17 +44,22 @@ function searchfromVal() {
     closeModal.addEventListener("click", function () {
       noInputModal.classList.remove("is-active");
     })
-    //Nothing else should occur other than the modal popping up if there's no input. So nothing should be entered into the local storage
     return;
   }
 
   index = localStorage.getItem("index");
+
   // Adds 1 to an index to store the input in the local storage when user clicks submit and runs this function
   index++;
   // When user clicks submit and runs this function, 2 items are added to local storage.
   // First, index (key), [number] (value).
   localStorage.setItem("index", index);
   // Second, search[number from index] (key), [user input] (value).
+
+  // Adds 1 to an index to store the input in the local storage 
+  index++;
+  localStorage.setItem("index", index);
+
   localStorage.setItem("search" + index, food);
 
   //Sends user to results page
