@@ -20,6 +20,14 @@ userInput.addEventListener("keypress", function (event) {
   }
 });
 
+//Clears application's local storage by clicking the Clear History button
+var clearHistory = document.getElementById("clearBtn");
+var history = document.querySelector(".pastSearches");
+clearHistory.addEventListener("click", function () {
+  localStorage.clear();
+  var parent = document.querySelector(".parent")
+  parent.innerHTML = "";
+})
 
 //Clicking the submit button runs the searchfromVal function
 submitBtn.addEventListener("click", searchfromVal)
