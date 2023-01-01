@@ -1,5 +1,5 @@
 // Enter in your spoonacular API key
-var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
+// var apiKey = "d1ae693fc9a54390aeaf4500f67b3932";
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -51,7 +51,7 @@ function resultsLogged() {
 
     var number = 12
     var index = localStorage.getItem("index");
-    var food = localStorage.getItem("search"+index);
+    var food = localStorage.getItem("search" + index);
     var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food + "&number=" + number;
     var recipeArray = [];
     fetch(resultsUrl)
@@ -59,7 +59,8 @@ function resultsLogged() {
             return response.json();
         })
         .then(function (data) {
-             // Iterates over all of the data 
+            console.log(data);
+            // Iterates over all of the data 
             for (let index = 0; index < 12; index++) {
                 // Renders Card when function is called in an area called columns
                 var column = document.createElement("div");
@@ -116,13 +117,14 @@ function resultsLogged() {
                     var modal = document.querySelector("#modalinfo")
                     modal.removeAttribute("class");
                     modal.setAttribute("class", "modal is-active")
-                   var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
+                    var getRecipeUrl = "https://api.spoonacular.com/recipes/" + data[index].id + "/information?apiKey=" + apiKey;
                     fetch(getRecipeUrl)
                         .then(function (response) {
                             return response.json();
                         })
                         .then(function (data) {
-                             //Sets title to modal
+                            console.log(data);
+                            //Sets title to modal
                             var modaltitle = document.querySelector(".modal-card-title");
                             modaltitle.textContent = data.title;
 
@@ -141,9 +143,20 @@ function resultsLogged() {
                             modalingredients.innerHTML = ingredientsList;
 
                             //Sets recipe instructions
-                            var modalrecipe = document.querySelector(".recipe");
+                            var modaldirections = document.querySelector(".recipe");
                             if (data.instructions != null) {
-                                modalrecipe.innerHTML = data.instructions;
+                                //Takes steps out from object and pushes them into an array with just their number and directions
+                                var directionsArray = [];
+                                for (var i = 0; i < data.analyzedInstructions[0].steps.length; i++) {
+                                    directionsArray.push( data.analyzedInstructions[0].steps[i].step + " ");
+                                }
+                                //Takes each ingredient from array and puts them into a list
+                                var directionsList = "<ol>"
+                                directionsArray.forEach(function (direction) {
+                                    directionsList += "<li>" + direction + "</li>";
+                                });
+                                directionsList += "</ol>"
+                                modaldirections.innerHTML = directionsList;
                             } else {
                                 modalrecipe.innerHTML = "Sorry, no recipe here.";
                             }
