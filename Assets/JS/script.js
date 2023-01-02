@@ -1,5 +1,5 @@
 //For each item in the local storage, they are appended as buttons below the search area
-for (let index = 1; index < localStorage.length - 1; index++) {
+for (let index = 1; index < localStorage.length - 4; index++) {
   var input = localStorage.getItem("search" + index);
   var parent = document.querySelector(".parent")
   var button = document.createElement("button")
