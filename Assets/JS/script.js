@@ -56,10 +56,6 @@ function searchfromVal() {
   localStorage.setItem("index", index);
   // Second, search[number from index] (key), [user input] (value).
 
-  // Adds 1 to an index to store the input in the local storage 
-  index++;
-  localStorage.setItem("index", index);
-
   localStorage.setItem("search" + index, food);
 
   //Sends user to results page
