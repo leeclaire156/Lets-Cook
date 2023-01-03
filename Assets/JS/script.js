@@ -64,33 +64,20 @@ function searchfromVal() {
 
 // The event listener for the search history buttons
 for (let index = 1; index < localStorage.length; index++) {
+  // First make sure to know which button you are pressing by searching for the class
   var historybutton = document.querySelector(".search" + index);
+  // When someone clicks the button
   historybutton.addEventListener("click", function (e) {
     e.preventDefault()
+    // Adds +1 to the saved index of the local storage and gets the item which matches the correct class
     var add = localStorage.getItem("search" + index);
-
     index = localStorage.getItem("index");
-
-    // Adds 1 to an index to store the input in the local storage when user clicks submit and runs this function
     index++;
+
+    // Sets the past search history as a new local storage key and puts the index back into the local storage
     localStorage.setItem("search"+index, add)
-    // When user clicks submit and runs this function, 2 items are added to local storage.
-    // First, index (key), [number] (value).
     localStorage.setItem("index", index);
+    // Changes the page to the recipe results page
     location.assign("./ingredients.html")
-
-
-
-    
-
-    // var pastItem = localStorage.getItem("search" + index)
-    // // JSON.stringify(pastItem)
-    // console.log(pastItem)
-    // var index = localStorage.getItem('index')
-    // // index++;
-    // console.log(index)
-    // // localStorage.setItem("search"+index, pastItem)
-    // location.assign('./ingredients.html')
-    
   })
 }
