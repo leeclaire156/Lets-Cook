@@ -45,11 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Number variables defines number of card displayed
+var number = 12
+// Event listener for See More button which will render and additional 12 cards
+var seemore = document.querySelector(".see-more")
+    seemore.addEventListener("click", function () {
+        number+12
+        resultsLogged(number)
+    })
+
 //Upon loading, the user's search query is extracted (lines 59-61) from the URL, I console logged to double check
 //The extracted query is put into the resultsURL variable, which is then fetched and the resulting data is logged
-function resultsLogged() {
+function resultsLogged(number) {
 
-    var number = 12
     var index = localStorage.getItem("index");
     var food = localStorage.getItem("search" + index);
     var resultsUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey + "&ingredients=" + food + "&number=" + number;
@@ -74,7 +82,7 @@ function resultsLogged() {
         .then(function (data) {
             // console.log(data);
             // Iterates over all of the data 
-            for (let index = 0; index < 12; index++) {
+            for (let index = 0; index < number; index++) {
                 // Renders Card when function is called in an area called columns
                 var column = document.createElement("div");
                 var cardpage = document.querySelector(".columns");
@@ -194,4 +202,4 @@ function resultsLogged() {
         })
 }
 
-resultsLogged();
+resultsLogged(number);
