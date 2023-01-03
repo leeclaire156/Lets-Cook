@@ -67,7 +67,12 @@ for (let index = 1; index < localStorage.length; index++) {
   var historybutton = document.querySelector(".search" + index);
   console.log(historybutton);
   historybutton.addEventListener("click", function () {
-    console.log("click search" + index)
-    console.log(historybutton.textContent)
+    console.log(localStorage.getItem("search" + index))
+    var pastItem = localStorage.getItem("search" + index)
+    var index = localStorage.getItem('index')
+    index++;
+    localStorage.setItem("search"+index, pastItem)
+    location.assign('./ingredients.html')
+    
   })
 }
