@@ -74,8 +74,8 @@ https://www.freepik.com/free-photo/pots-vegetables-harvest_1440232.htm#query=foo
 * Resizing image services provided by [iLoveIMG](https://www.iloveimg.com/):<br></br> 
 https://www.iloveimg.com/resize-image#resize-options,pixels
 
-* Lets Cook/Baking image provided by :<br></br>
-https://www.flaticon.com/search/2?word=cooking&order_by=4
+* Lets Cook nav image provided by [Adobe Stock](https://stock.adobe.com/):<br></br>
+https://stock.adobe.com/search?k=lets+cook&search_type=usertyped&asset_id=283519857
 
 * Favicon <a href="https://www.flaticon.com/free-icons/fridge" title="fridge icons">Fridge icon created by Freepik - Flaticon</a>:<br></br>
 https://www.flaticon.com/free-icon/fridge_2333450?term=fridge&page=1&position=4&origin=tag&related_id=2333450
