@@ -55,7 +55,7 @@ This project was made by using HTML, CSS, Javascript, Bulma, the Grammarly API, 
 This project was created by [André Brahin](https://github.com/VenBak), [Erica Del Rio](https://github.com/irecatyl), [Muhammad Jamil](https://github.com/Muhammadjamil720), and [Claire Lee](https://github.com/leeclaire156).
 
 * André was responsible for the wireframing, HTML, integrating Bulma's CSS framework, and utilizing local storage for past searches to create interactive search history buttons. 
-* Erica was responsible for the styling the recipe modals.
+* Erica was responsible for the styling the recipe modals and making the Enter keydown event equivalent to clicking the Submit button.
 * Muhammad was responsible for cleaning up the code.
 * Claire was responsible for integrating the Grammarly API and the recipe information into the result page modals using the Spoonacular API, styling the front page with CSS, creating the no input error modal along with the error 402 modal, adding the clear history button, and updating the README file.
 
@@ -74,8 +74,8 @@ https://www.freepik.com/free-photo/pots-vegetables-harvest_1440232.htm#query=foo
 * Resizing image services provided by [iLoveIMG](https://www.iloveimg.com/):<br></br> 
 https://www.iloveimg.com/resize-image#resize-options,pixels
 
-* Lets Cook/Baking image provided by :<br></br>
-https://www.flaticon.com/search/2?word=cooking&order_by=4
+* Lets Cook nav image provided by [Adobe Stock](https://stock.adobe.com/):<br></br>
+https://stock.adobe.com/search?k=lets+cook&search_type=usertyped&asset_id=283519857
 
 * Favicon <a href="https://www.flaticon.com/free-icons/fridge" title="fridge icons">Fridge icon created by Freepik - Flaticon</a>:<br></br>
 https://www.flaticon.com/free-icon/fridge_2333450?term=fridge&page=1&position=4&origin=tag&related_id=2333450
