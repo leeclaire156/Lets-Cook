@@ -54,7 +54,7 @@ This project was made by using HTML, CSS, Javascript, Bulma, the Grammarly API, 
 
 This project was created by [André Brahin](https://github.com/VenBak), [Erica Del Rio](https://github.com/irecatyl), [Muhammad Jamil](https://github.com/Muhammadjamil720), and [Claire Lee](https://github.com/leeclaire156).
 
-* André was responsible for the wireframing, HTML, integrating Bulma's CSS framework, and utilizing local storage for past searches to create interactive search history buttons. 
+* André (VenBak) was responsible for the wireframing, HTML, integrating Bulma's CSS framework, Javascript for the results of the API with modal implementation and utilizing local storage for past searches to create interactive search history buttons. 
 * Erica was responsible for the styling the recipe modals.
 * Muhammad was responsible for cleaning up the code.
 * Claire was responsible for integrating the Grammarly API and the recipe information into the result page modals using the Spoonacular API, styling the front page with CSS, creating the no input error modal along with the error 402 modal, adding the clear history button, and updating the README file.
