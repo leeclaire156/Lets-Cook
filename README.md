@@ -36,7 +36,7 @@ This project was made by using HTML, CSS, Javascript, Bulma, the Grammarly API, 
 ![Home page with new "oranges pineapple" button based on recent query ](./Assets/Images/Usage-Screenshots/Home-Page-First-Query-2.PNG) 
 
 * When the user clicks on the Clear History button, the local storage will be cleared of all past searches.
-![Home page with many past query based buttons](./Assets/Images/Usage-Screenshots/)
+![Home page with many past query based buttons](./Assets/Images/Usage-Screenshots/Home-Page-Clear-History-1.PNG)
 ![Empty home page after clicking "Clear History" button](./Assets/Images/Usage-Screenshots/Home-Page-Clean.PNG) 
 
 * Clicking on the button will display the recipe search for those items again.
